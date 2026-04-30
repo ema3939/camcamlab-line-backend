@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: camcamlab-line-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: MESSAGING_CHANNEL_SECRET
+        value: 6b945dc28d92f7b4afcb08d7037f744e
+      - key: MESSAGING_CHANNEL_ACCESS_TOKEN
+        value: YOUR_LONG_LIVED_ACCESS_TOKEN
+      - key: LOGIN_CHANNEL_ID
+        value: "2009922414"
+      - key: LOGIN_CHANNEL_SECRET
+        value: 2a3ce216064d1ed4e435d92ba3e070f9
+      - key: DIAGNOSIS_TOOL_URL
+        value: YOUR_DIAGNOSIS_TOOL_URL
+      - key: LOGIN_REDIRECT_URI
+        value: https://YOUR_RENDER_APP_URL/line_login_callback
