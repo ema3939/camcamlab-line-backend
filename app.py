@@ -28,7 +28,7 @@ LOGIN_CHANNEL_SECRET = os.environ.get("LOGIN_CHANNEL_SECRET", "2a3ce216064d1ed4e
 DIAGNOSIS_TOOL_URL = os.environ.get("DIAGNOSIS_TOOL_URL", "https://8080-imfi0qjk1ta7dcqyfm3in-dfb685f9.sg1.manus.computer")
 
 # LINEログインのコールバックURL（本番デプロイ後に設定）
-LOGIN_REDIRECT_URI = os.environ.get("LOGIN_REDIRECT_URI", "https://YOUR_SERVER_URL/line_login_callback")
+LOGIN_REDIRECT_URI = os.environ.get("LOGIN_REDIRECT_URI", "https://camcamlab-line-backend.onrender.com/line_login_callback")
 
 # ============================================================
 # 診断タイプの定義
